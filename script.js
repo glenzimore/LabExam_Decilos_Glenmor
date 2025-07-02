@@ -1,13 +1,30 @@
 function validateForm() {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+    const errorMessage = document.getElementById("error-message");
 
-    if (email === "" || password === "") {
-        document.getElementById("error-message").style.display = "block";
+    if (!email) {
+        errorMessage.textContent = "Email is required.";
+        errorMessage.style.display = "block";
+        return false;
+    }
+
+    if (!password) {
+        errorMessage.textContent = "Password is required.";
+        errorMessage.style.display = "block";
         return false;
     }
 
 
-    document.getElementById("error-message").style.display = "none";
-    return true;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        errorMessage.textContent = "Please enter a valid email address.";
+        errorMessage.style.display = "block";
+        return false;
+    }
+
+
+    errorMessage.style.display = "none";
+    window.location.href = "home.html";
+    return false; 
 }
