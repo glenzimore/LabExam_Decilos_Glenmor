@@ -1,36 +1,68 @@
-# LabExam_Decilos_Glenmor
+LabExam_Decilos_Glenmor
+========================
 
+This project is a basic login interface built using HTML, CSS, and JavaScript. 
+It demonstrates front-end development fundamentals including user input validation, 
+styling, branching in Git, and documentation.
 
-This project is a basic front-end login system using HTML, CSS, and JavaScript. 
-It provides simple form validation and redirects to a home page after login.
+------------------------
+Project Steps
+------------------------
 
+1. Initialize
+-------------
+- Created a new project folder: LabExam_Decilos_Glenmor
+- Initialized Git using: git init
 
---------------------------
-How It Works
---------------------------
+2. Add HTML
+-----------
+- Created index.html with a login form
+  - Includes email and password input fields
 
-1. index.html - Login Page
-   - Users enter an email and password.
-   - JavaScript validates the inputs.
-   - If the input is valid, the user is redirected to home.html.
-   - If invalid, an error message is shown.
+3. Style Page
+-------------
+- Created styles.css
+- Linked it to index.html
+- Styled the login page using Flexbox, colors, spacing, and responsive layout
 
-2. script.js - Form Validation Logic
-   - Checks that both fields are filled.
-   - Validates email format using a regular expression.
-   - Displays error messages as needed.
-   - Redirects to home.html if validation passes.
+4. JS Validation
+----------------
+- Created scripts.js
+- Added JavaScript form validation:
+  - Checks if email or password is empty
+  - Displays an error message
+  - Redirects to home.html if valid
 
-3. home.html - Welcome Page
-   - Displays a "Welcome" message.
-   - Includes a navigation bar with:
-     - Home
-     - Profile
-     - Settings
-     - Logout (returns to index.html)
+5. Homepage
+-----------
+- Created home.html
+- Displays a welcome message upon login
+- Includes a logout link
 
-4. style.css - Styling
-   - Clean and responsive layout using Flexbox.
-   - Styled inputs, buttons, navbar, and error messages.
+6. Branching
+------------
+- Created a new Git branch named: feature-navbar
+  Command: git checkout -b feature-navbar
+- Added a navigation bar to home.html
 
+7. Merge
+--------
+- Switched back to master branch: git checkout master
+- Merged feature-navbar into master: git merge feature-navbar
+
+8. Push to GitHub
+-----------------
+- Added GitHub remote repository:
+  git remote add origin https://github.com/glenzimore/LabExam_Decilos_Glenmor.git
+- Pushed the code:
+  git push -u origin master
+
+9. Documentation
+----------------
+- Created README.txt to explain project steps and structure
+
+10. Submission
+--------------
+- Used git log to show commit history
+- Verified the webpage runs correctly in browser by opening index.html
 
